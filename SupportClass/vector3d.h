@@ -35,7 +35,11 @@ class vector3d {
         bool operator==(const vector3d vec2);
         bool operator!=(const vector3d vec2);
 
-        friend std::ostream& operator<<(std::ostream& out,const vector3d& vec);
+    friend std::ostream& operator<<(std::ostream& out,const vector3d& vec)
+    {
+        out << vec.x << " "<< vec.y << " "<< vec.z << std::endl;
+        return out;
+    }
 
 
 };

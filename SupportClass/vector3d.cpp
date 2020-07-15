@@ -19,7 +19,7 @@ vector3d::vector3d(float a, float b, float c)
 
 float vector3d::dotProduct(const vector3d& vec2)
 {
-    return x*vec2.x+y*vec2.y+z*vec2.z);
+    return (x*vec2.x+y*vec2.y+z*vec2.z);
 }
 vector3d vector3d::crossProduct(const vector3d& vec2)
 {
@@ -116,13 +116,22 @@ vector3d& vector3d::operator*=(float num)
 }
 vector3d& vector3d::operator/=(float num)
 {
-    x/=num;
-    y/=num;
-    z/=num;
+    if(num!=0)
+    {
+        x /= num;
+        y /= num;
+        z /= num;
+    }
     return *this;
 }
 
-bool vector3d::operator==(const vector3d vec2);
-bool vector3d::operator!=(const vector3d vec2);
+bool vector3d::operator==(const vector3d vec2)
+{
+    return (x==vec2.x && y==vec2.y && z==vec2.z);
+}
+bool vector3d::operator!=(const vector3d vec2)
+{
+    return (x!=vec2.x || y!=vec2.y || z!=vec2.z);
+}
 
-friend std::ostream& operator<<(std::ostream& out,const vector3d& vec);
+
