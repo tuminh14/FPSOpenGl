@@ -1,3 +1,0 @@
-/media/tuminh14/OpenGl/FPS/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/media/tuminh14/OpenGl/FPS/cmake-build-debug/CMakeFiles/edit_cache.dir
-/media/tuminh14/OpenGl/FPS/cmake-build-debug/CMakeFiles/main.cpp.dir
